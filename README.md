@@ -295,13 +295,10 @@ Desde una perspectiva de negocio, ofrece una herramienta que podría apoyar tare
 - Imágenes y detalles de los sets.
 - Botón para limpiar filtros.
 
-### Vista previa
-
-*Insertar aquí una captura del dashboard final.*
 
 ### Acceso al proyecto
 
-*Agregar enlace al archivo `.pbix` o a la publicación de Power BI, si está disponible.*
+Podra usted encontrarlo como el único archivo .pbix en este repositorio
 
 ---
 
