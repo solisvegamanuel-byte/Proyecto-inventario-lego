@@ -1,78 +1,59 @@
-# LEGO Set Explorer – Power BI Dashboard
+# 🧱 LEGO Set Explorer | De datos a una experiencia interactiva de productos
 
-## Descripción
+**Business Intelligence | Power BI · Power Query · DAX · Análisis de Productos**
 
-Este proyecto consiste en el desarrollo de un dashboard interactivo en Power BI para explorar distintos sets de LEGO y facilitar la búsqueda de productos según criterios como temática, grupo de temática, rango de edad, precio y cantidad de piezas.
+## 1. 📊 Contexto y problema de negocio
 
-El objetivo principal fue construir una herramienta visual que permitiera al usuario filtrar rápidamente el catálogo y consultar la información más relevante de cada set.
+LEGO cuenta con un extenso catálogo de sets dirigidos a consumidores de diferentes edades, intereses y presupuestos. Cada producto posee características como su temática, precio, número de piezas y edad recomendada.
 
----
+Sin embargo, cuando existe una gran cantidad de productos, explorar y comparar estas características puede resultar complicado si la información únicamente se encuentra disponible en tablas convencionales.
 
-## Objetivo del proyecto
+El desafío de este proyecto consistió en transformar un dataset de productos LEGO en una herramienta visual que facilitara la exploración del catálogo y permitiera identificar las características de los diferentes sets.
 
-Crear una herramienta interactiva que permita:
+### Preguntas de negocio
 
-- Explorar diferentes sets de LEGO.
-- Filtrar productos por temática.
-- Filtrar por grupo de temática.
-- Filtrar por rango de edad.
-- Filtrar por rango de precio.
-- Comparar cantidad de piezas y precio.
-- Visualizar información detallada de un set seleccionado.
-- Restablecer todos los filtros mediante un botón.
+- ¿Cuántos sets componen el catálogo analizado?
+- ¿Cuáles son las temáticas y grupos disponibles?
+- ¿Cuál es el precio promedio de los productos?
+- ¿Cómo varían los precios según la temática y las características de los sets?
+- ¿Qué opciones existen para determinados rangos de edad y presupuesto?
+- ¿Cómo facilitar que un usuario encuentre productos específicos sin revisar manualmente toda la información?
 
----
-
-## Preparación de los datos
-
-La base de datos original fue revisada y limpiada antes de construir el dashboard.
-
-Durante el proceso se realizaron tareas como:
-
-- Revisión de tipos de datos.
-- Análisis de valores nulos.
-- Eliminación de registros sin información relevante para el análisis.
-- Eliminación de columnas innecesarias.
-- Validación de precios.
-- Validación de cantidad de piezas.
-- Validación de edades mínimas recomendadas.
-- Preparación de campos para su uso dentro de Power BI.
-
-También se trabajó previamente con Python y pandas para revisar la estructura del dataset y detectar problemas de calidad en los datos.
+**Problema central:** convertir un catálogo de productos en una herramienta interactiva que simplificara la búsqueda, comparación y exploración de sets LEGO.
 
 ---
 
-## Transformaciones realizadas
+## 2. 🎯 Objetivo y estrategia de análisis
 
-Dentro de Power Query se realizaron diferentes transformaciones para preparar la información.
+El objetivo principal fue desarrollar un dashboard interactivo en Power BI que permitiera explorar los sets LEGO mediante sus principales características, ofreciendo una experiencia de consulta intuitiva y organizada.
 
-### Rango de edad
+Para resolver este problema, estructuré el proyecto en cinco etapas:
 
-Se creó una clasificación de edad basada en la edad mínima recomendada:
+1. **Exploración:** comprender la estructura del dataset e identificar las variables relevantes.
+2. **Preparación:** limpiar, transformar y organizar la información mediante Power Query.
+3. **Modelado:** establecer las variables y clasificaciones necesarias para facilitar la exploración.
+4. **Indicadores:** desarrollar medidas DAX para resumir las características generales del catálogo.
+5. **Visualización:** construir un dashboard con filtros interactivos, indicadores e información detallada de los productos.
 
-- 1 a 4
-- 5 a 9
-- 10 a 17
-- Mayor de 18
-
-### Rango de precio
-
-Los sets fueron agrupados en diferentes niveles de precio para facilitar la exploración:
-
-- $
-- $$
-- $$$
-- $$$$
-- $$$$$
-
-Esto permite utilizar rangos categóricos además del filtro numérico de precio.
+La estrategia consistió en transformar los datos de un catálogo convencional en una interfaz que permitiera a los usuarios encontrar y comparar productos de manera sencilla.
 
 ---
 
-## Medidas DAX
+## 3. 🧰 Tecnologías utilizadas
 
-Se crearon diferentes medidas para resumir la información del catálogo, entre ellas:
+| Herramienta | Aplicación |
+|---|---|
+| Power BI Desktop | Desarrollo del dashboard interactivo |
+| Power Query | Preparación, limpieza y transformación de datos |
+| DAX | Creación de medidas e indicadores |
+| Modelado de datos | Organización de las variables utilizadas en el dashboard |
+| Visualizaciones interactivas | Exploración y comparación del catálogo |
+| Bookmarks | Restablecimiento de filtros y navegación |
 
-```DAX
-Total Sets =
-DISTINCTCOUNT(lego_sets[set_id])
+---
+
+## 4. 🔎 Desarrollo del proyecto
+
+### Etapa 1. Exploración y comprensión del dataset
+
+**Problema:** la información del catálogo debía
